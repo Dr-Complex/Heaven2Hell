@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dti73gvcc4h81"]
+
+[ext_resource type="Script" uid="uid://ci2rc5j0autn4" path="res://main/Recources/Enemies/base_enemy.gd" id="1_2dkdu"]
+[ext_resource type="Texture2D" uid="uid://dxnuniqh0a03e" path="res://main/Textures/Enemies/Enemy-cube_1.png" id="2_7tube"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i451h"]
+
+[node name="Enemy" type="Area2D" unique_id=1041704357]
+script = ExtResource("1_2dkdu")
+tint = Color(0, 0, 1, 1)
+atlas = ExtResource("2_7tube")
+atlas_size = Vector2i(8, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1117720409]
+shape = SubResource("CircleShape2D_i451h")
