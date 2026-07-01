@@ -39,17 +39,13 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/BulletUpHell/plugin.cfg", "res://addons/GDQuest_GDScript_formatter/plugin.cfg")
+enabled=PackedStringArray("res://addons/BulletUpHell/plugin.cfg", "res://addons/GDQuest_GDScript_formatter/plugin.cfg")
 
 [file_customization]
 
 folder_colors={
 "res://addons/": "orange",
-"res://main/Recources/": "gray",
-"res://main/Scenes/": "blue",
-"res://main/Scenes/managers/": "purple",
-"res://main/Scripts/": "green",
-"res://main/Textures/": "red"
+"res://main/Recources/": "gray"
 }
 
 [global_group]

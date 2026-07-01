@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cmih6pwmw2xuf"]
+
+[ext_resource type="Script" uid="uid://djt2sh5axsrtf" path="res://main/Scenes/Player/player_dummy.gd" id="1_jm5vc"]
+[ext_resource type="Texture2D" uid="uid://1c4n0fp6wup" path="res://addons/BulletUpHell/Bullet/Sprites/Bullet_11.png" id="2_hvs44"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l6ub1"]
+load_path = "res://.godot/imported/Alpha-charater.png-d81222123984bce285ebcee96199687a.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fwyl3"]
+
+[node name="PlayerDummy" type="CharacterBody2D" unique_id=1674271572]
+script = ExtResource("1_jm5vc")
+base_movement_speed = 100.0
+vis_atles = SubResource("CompressedTexture2D_l6ub1")
+vis_square_cell_size = 32
+vis_animation_size = 8
+vis_animation_speed = 0.5
+vis_sprite_path = NodePath("Sprite2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2104673195]
+shape = SubResource("RectangleShape2D_fwyl3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=396170450]
+texture = ExtResource("2_hvs44")

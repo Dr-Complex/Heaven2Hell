@@ -1,0 +1,19 @@
+## This is a storage place for usefull code that is not in use
+##
+## All unused code must be here
+
+# bullet pool cration in code
+	Spawning.create_shared_area(NAME, LAYERS_HEX, MASK_HEX)
+	Spawning.get_shared_area(NAME).set_meta(StringName("ShapeCount"), 0)
+	Spawning.get_shared_area(NAME).set_meta(StringName("Bullets"), { })
+	Spawning.create_pool(NAME, SIZE, NAME)
+
+# find andload from folder
+	var dir := DirAccess.open("res:place")
+	for file in dir.get_files():
+		if (file.get_extension() == "tres"):
+			var read_file := load("res:place/%s.tres" % file.get_basename())
+		else: 
+			print("wrong extension")
+
+END
