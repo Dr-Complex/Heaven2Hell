@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://dyj3ndf4ur32t"]
-
-[ext_resource type="Script" uid="uid://bdqlum80dpan" path="res://main/Scripts/weapon_marker.gd" id="1_rvwtw"]
-
-[node name="Marker2D" type="Marker2D" unique_id=1716580893]
-script = ExtResource("1_rvwtw")

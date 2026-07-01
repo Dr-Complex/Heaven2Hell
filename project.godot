@@ -45,11 +45,7 @@ enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addon
 
 folder_colors={
 "res://addons/": "orange",
-"res://main/Recources/": "gray",
-"res://main/Scenes/": "blue",
-"res://main/Scenes/managers/": "purple",
-"res://main/Scripts/": "green",
-"res://main/Textures/": "red"
+"res://main/Recources/": "gray"
 }
 
 [global_group]
