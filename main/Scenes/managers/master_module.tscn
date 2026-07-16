@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://sneyvaaj7gmp"]
-
-[ext_resource type="Script" uid="uid://d13esmpckyice" path="res://main/Scenes/managers/master_module.gd" id="1_1irlq"]
-
-[node name="Master" type="Node" unique_id=1133087690]
-script = ExtResource("1_1irlq")

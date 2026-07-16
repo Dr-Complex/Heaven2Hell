@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7108lwu58a7j"
-path="res://.godot/imported/TX Tileset Grass.png-7b57ce51e1fd08c35061be2ff14efb47.ctex"
+uid="uid://cco4n3v7ancng"
+path="res://.godot/imported/Character-Dummy-Template.png-1c2bb9ffa1ef809038aedf528ef80060.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://main/Recources/Textures/Backdrop/TX Tileset Grass.png"
-dest_files=["res://.godot/imported/TX Tileset Grass.png-7b57ce51e1fd08c35061be2ff14efb47.ctex"]
+source_file="res://main/Recources/Textures/Characters/Character-Dummy-Template.png"
+dest_files=["res://.godot/imported/Character-Dummy-Template.png-1c2bb9ffa1ef809038aedf528ef80060.ctex"]
 
 [params]
 

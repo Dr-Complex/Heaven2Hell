@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cmih6pwmw2xuf"]
+
+[ext_resource type="Script" uid="uid://blnxk4ubisf0f" path="res://main/Scenes/Characters/base_player.gd" id="1_osgy8"]
+[ext_resource type="Texture2D" uid="uid://cco4n3v7ancng" path="res://main/Recources/Textures/Characters/Character-Dummy-Template.png" id="2_2we0h"]
+[ext_resource type="Texture2D" uid="uid://1c4n0fp6wup" path="res://addons/BulletUpHell/Bullet/Sprites/Bullet_11.png" id="2_hvs44"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fwyl3"]
+
+[node name="PlayerDummy" type="CharacterBody2D" unique_id=1674271572 node_paths=PackedStringArray("vis_sprite", "vis_progress_bars")]
+wall_min_slide_angle = 0.0
+script = ExtResource("1_osgy8")
+base_movement_speed = 100.0
+base_sprint_mult_percent = 20.0
+base_max_stamina = 1.0
+base_max_health = 100.0
+base_stamina_recovery_percent = 20.0
+base_invincible = 100.0
+vis_atles = ExtResource("2_2we0h")
+vis_square_frame_size = 32
+vis_animation_size = 8
+vis_animation_speed = 1.0
+vis_sprite = NodePath("Sprite2D")
+vis_progress_bars = [NodePath("Health"), NodePath("Stamina")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2104673195]
+shape = SubResource("RectangleShape2D_fwyl3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=396170450]
+texture = ExtResource("2_hvs44")
+
+[node name="Health" type="ProgressBar" parent="." unique_id=927598775]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -30.0
+offset_top = 28.0
+offset_right = 30.0
+offset_bottom = 32.0
+grow_horizontal = 2
+show_percentage = false
+
+[node name="Stamina" type="ProgressBar" parent="." unique_id=2019317275]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -30.0
+offset_top = 32.0
+offset_right = 30.0
+offset_bottom = 36.0
+grow_horizontal = 2
+show_percentage = false

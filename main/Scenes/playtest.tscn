@@ -1,0 +1,51 @@
+[gd_scene format=4 uid="uid://rlb7iq7q3yo"]
+
+[ext_resource type="Script" uid="uid://dwvdpsju2ju1y" path="res://main/Scenes/Characters/backdrop.gd" id="1_7yepy"]
+[ext_resource type="Script" uid="uid://d13esmpckyice" path="res://main/Scenes/Managers/main_manager.gd" id="1_wrd8c"]
+[ext_resource type="PackedScene" uid="uid://cmih6pwmw2xuf" path="res://main/Scenes/Characters/player_dummy.tscn" id="2_diy66"]
+[ext_resource type="Texture2D" uid="uid://occjibms5bh3" path="res://main/Recources/Textures/Backdrop/Tiles_temp.png" id="3_wrd8c"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ew45h"]
+texture = ExtResource("3_wrd8c")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:0/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+4:1/0 = 0
+2:2/0 = 0
+1:2/0 = 0
+0:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_7yepy"]
+tile_shape = 1
+tile_size = Vector2i(32, 16)
+sources/0 = SubResource("TileSetAtlasSource_ew45h")
+
+[node name="Playtest" type="Node2D" unique_id=2123441948 node_paths=PackedStringArray("player_node", "back_drop_node")]
+script = ExtResource("1_wrd8c")
+player_node = NodePath("PlayerDummy")
+back_drop_node = NodePath("Map")
+
+[node name="Main_Cam" type="Camera2D" parent="." unique_id=1894385173]
+
+[node name="PlayerDummy" parent="." unique_id=1674271572 instance=ExtResource("2_diy66")]
+z_index = 1
+
+[node name="Map" type="TileMapLayer" parent="." unique_id=111529015 node_paths=PackedStringArray("root", "node_player", "node_camera")]
+z_index = -1
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAD+////AAADAAAAAAD///7/AAADAAAAAAD///3/AAADAAAAAAAAAPz/AAADAAAAAAAAAP3/AAACAAAAAAABAP7/AAABAAAAAAAAAP//AAABAAAAAAAAAP7/AAACAAAAAAAAAAAAAAABAAAAAAD//wAAAAACAAAAAAD/////AAACAAAAAAD//wEAAAABAAAAAAAAAAIAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAAAAAAAAAAAAAABAP//AAAAAAAAAAD+//7/AAAEAAAAAAD+//3/AAAEAAAAAAD///z/AAAEAAAAAAD///v/AAAEAAAAAAD9//3/AAAAAAEAAAD+//z/AAAAAAEAAAD+//v/AAAAAAEAAAD///r/AAAAAAEAAAD9//z/AAABAAEAAAD9//v/AAABAAEAAAD+//r/AAABAAEAAAD+//n/AAABAAEAAAD8//v/AAACAAEAAAD9//r/AAACAAEAAAD9//n/AAACAAEAAAD+//j/AAACAAEAAAD8//r/AAADAAEAAAD8//n/AAADAAEAAAD9//j/AAADAAEAAAD9//f/AAADAAEAAAD7//n/AAAEAAEAAAD8//j/AAAEAAEAAAD8//f/AAAEAAEAAAD9//b/AAAEAAEAAAD7//j/AAAAAAIAAAD7//f/AAAAAAIAAAD8//b/AAAAAAIAAAD8//X/AAAAAAIAAAD6//f/AAABAAIAAAD7//b/AAABAAIAAAD7//X/AAABAAIAAAD8//T/AAABAAIAAAD7//P/AAACAAIAAAD7//T/AAACAAIAAAD6//X/AAACAAIAAAD6//b/AAACAAIAAAA=")
+tile_set = SubResource("TileSet_7yepy")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+script = ExtResource("1_7yepy")
+root = NodePath("..")
+node_player = NodePath("../PlayerDummy")
+node_camera = NodePath("../Main_Cam")
